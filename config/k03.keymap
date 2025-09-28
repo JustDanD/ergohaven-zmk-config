@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -18,7 +17,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "SCRL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&kp PG_UP>, <&kp PAGE_DOWN>;
         };
 
         windows: windows {
@@ -34,14 +33,15 @@
 
         base {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2     &kp N3    &kp N4    &kp N5                                  &kp N6  &kp N7         &kp N8     &kp N9     &kp N0    &kp BSPC
-&kp ESC    &kp Q   &kp W      &kp E     &kp R     &kp T                                   &kp Y   &kp U          &kp I      &kp O      &kp P     &kp BSLH
-&kp TAB    &kp A   &kp S      &kp D     &kp F     &kp G                                   &kp H   &kp J          &kp K      &kp L      &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X      &kp C     &kp V     &kp B   &kp LBKT     &kp RIGHT_BRACKET  &kp N   &kp M          &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
-                   &kp LCTRL  &kp LALT  &kp CAPS  &mo 1   &kp SPACE    &kp ENTER          &mo 2   &kp RIGHT_GUI  &kp RALT   &kp RCTRL
+&kp GRAVE  &kp N1  &kp N2        &kp N3     &kp N4    &kp N5                            &kp N6  &kp N7         &kp N8            &kp N9             &kp N0    &kp BSPC
+&kp ESC    &kp Q   &kp W         &kp E      &kp R     &kp T                             &kp Y   &kp U          &kp I             &kp O              &kp P     &kp BSLH
+&kp TAB    &kp A   &kp S         &kp D      &kp F     &kp G                             &kp H   &kp J          &kp K             &kp L              &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X         &kp C      &kp V     &kp B   &kp C_POWER    &kp C_PIP  &kp N   &kp M          &kp COMMA         &kp DOT            &kp FSLH  &kp RSHFT
+                   &kp LEFT_ALT  &kp LCTRL  &kp CAPS  &mo 1   &kp SPACE      &kp ENTER  &mo 2   &kp RIGHT_GUI  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             display-name = "Base";
+            sensor-bindings = <&windows>, <&scrl>;
         };
 
         nav {
