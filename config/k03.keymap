@@ -42,7 +42,7 @@
             bindings = <&macro_press>, <&kp RCTRL>, <&macro_tap>, <&kp TAB>;
 
             label = "NEXTTAB";
-            wait-ms = <0>;
+            wait-ms = <10>;
         };
 
         prevtab: prevtab {
@@ -55,7 +55,7 @@
                 <&kp TAB>;
 
             label = "PREVTAB";
-            wait-ms = <0>;
+            wait-ms = <15>;
         };
     };
 
