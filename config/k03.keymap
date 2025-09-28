@@ -41,6 +41,7 @@
             #binding-cells = <0>;
             bindings = <&kp RCTRL &kp TAB>;
             label = "NEXTTAB";
+            wait-ms = <0>;
         };
 
         prevtab: prevtab {
@@ -48,6 +49,7 @@
             #binding-cells = <0>;
             bindings = <&kp RCTRL &kp LEFT_SHIFT &kp TAB>;
             label = "PREVTAB";
+            wait-ms = <0>;
         };
     };
 
