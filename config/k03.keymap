@@ -26,6 +26,29 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp C_AL_NEXT_TASK>, <&kp C_AL_PREVIOUS_TASK>;
         };
+
+        tabs: tabs {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "TABS";
+            #sensor-binding-cells = <0>;
+            bindings = <&nexttab>, <&prevtab>;
+        };
+    };
+
+    macros {
+        nexttab: nexttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp TAB>;
+            label = "NEXTTAB";
+        };
+
+        prevtab: prevtab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LEFT_SHIFT &kp TAB>;
+            label = "PREVTAB";
+        };
     };
 
     keymap {
@@ -41,7 +64,7 @@
             >;
 
             display-name = "Base";
-            sensor-bindings = <&windows>, <&scrl>;
+            sensor-bindings = <&windows>, <&tabs>;
         };
 
         nav {
