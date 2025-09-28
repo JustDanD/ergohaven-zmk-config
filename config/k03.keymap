@@ -24,7 +24,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "WINDOWS";
             #sensor-binding-cells = <0>;
-            bindings = <&kp C_AL_NEXT_TASK>, <&kp C_AL_PREVIOUS_TASK>;
+            bindings = <&alttab>, <&prevalttab>;
         };
 
         tabs: tabs {
@@ -64,6 +64,36 @@
 
             label = "PREVTAB";
             wait-ms = <15>;
+        };
+
+        alttab: alttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RGUI>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp RIGHT_GUI>;
+
+            label = "ALTTAB";
+            wait-ms = <10>;
+        };
+
+        prevalttab: prevalttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RGUI &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp RIGHT_GUI &kp LEFT_SHIFT>;
+
+            label = "PREVALTTAB";
+            wait-ms = <10>;
         };
     };
 
