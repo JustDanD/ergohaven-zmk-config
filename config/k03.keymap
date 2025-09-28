@@ -39,7 +39,8 @@
         nexttab: nexttab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp TAB>;
+            bindings = <&macro_press>, <&kp RCTRL>, <&macro_tap>, <&kp TAB>;
+
             label = "NEXTTAB";
             wait-ms = <0>;
         };
@@ -47,7 +48,12 @@
         prevtab: prevtab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp LEFT_SHIFT &kp TAB>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp TAB>;
+
             label = "PREVTAB";
             wait-ms = <0>;
         };
