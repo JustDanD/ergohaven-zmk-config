@@ -33,6 +33,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&nexttab>, <&prevtab>;
         };
+
+        groups: groups {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "GROUPS";
+            #sensor-binding-cells = <0>;
+            bindings = <&nextgroup>, <&prevgroup>;
+        };
     };
 
     macros {
@@ -64,6 +71,36 @@
 
             label = "PREVTAB";
             wait-ms = <15>;
+        };
+
+        nextgroup: nextgroup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp DOWN_ARROW>,
+                <&macro_release>,
+                <&kp RCTRL &kp LEFT_ALT>;
+
+            label = "NEXTGROUP";
+            wait-ms = <10>;
+        };
+
+        prevgroup: prevgroup {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp UP_ARROW>,
+                <&macro_release>,
+                <&kp RCTRL &kp LEFT_ALT>;
+
+            label = "PREVGROUP";
+            wait-ms = <10>;
         };
     };
 
@@ -106,6 +143,7 @@
             >;
 
             display-name = "Symbols";
+            sensor-bindings = <&groups>;
         };
 
         adj {
