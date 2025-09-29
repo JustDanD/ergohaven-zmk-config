@@ -93,6 +93,7 @@
             >;
 
             display-name = "Navigation";
+            sensor-bindings = <&tabs>, <&enc_vol>;
         };
 
         sym {
