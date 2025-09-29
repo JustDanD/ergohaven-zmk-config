@@ -82,7 +82,7 @@
                 <&macro_tap>,
                 <&kp DOWN_ARROW>,
                 <&macro_release>,
-                <&kp RCTRL &kp LEFT_ALT>;
+                <&kp LEFT_GUI &kp LEFT_ALT>;
 
             label = "NEXTGROUP";
             wait-ms = <10>;
