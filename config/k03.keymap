@@ -78,7 +78,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL &kp LEFT_ALT>,
+                <&kp LEFT_GUI &kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp DOWN_ARROW>,
                 <&macro_release>,
@@ -93,11 +93,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp RCTRL &kp LEFT_ALT>,
+                <&kp LEFT_GUI &kp LEFT_ALT>,
                 <&macro_tap>,
                 <&kp UP_ARROW>,
                 <&macro_release>,
-                <&kp RCTRL &kp LEFT_ALT>;
+                <&kp LEFT_GUI &kp LEFT_ALT>;
 
             label = "PREVGROUP";
             wait-ms = <10>;
