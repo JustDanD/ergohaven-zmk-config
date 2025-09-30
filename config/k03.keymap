@@ -102,6 +102,36 @@
             label = "PREVGROUP";
             wait-ms = <10>;
         };
+
+        nextproj: nextproj {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp RCTRL &kp LEFT_ALT>;
+
+            label = "NEXTPROJ";
+            wait-ms = <10>;
+        };
+
+        prevproj: prevproj {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL &kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_release>,
+                <&kp RCTRL &kp LEFT_ALT &kp LEFT_SHIFT>;
+
+            label = "PREVPROJ";
+            wait-ms = <10>;
+        };
     };
 
     keymap {
