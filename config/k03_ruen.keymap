@@ -10,6 +10,8 @@
     flavor = "balanced";
 };
 
+&lt { quick-tap-ms = <200>; };
+
 / {
     behaviors {
         enc_vol: enc_vol {
